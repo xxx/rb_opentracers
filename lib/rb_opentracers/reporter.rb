@@ -1,0 +1,2 @@
+module RbOpentracers::Reporter
+end

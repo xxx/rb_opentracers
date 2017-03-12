@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package tracer.reporter.appdashpbuf;
+
+// CollectPacket is the message sent to a remote collector server by one of
+// it's clients.
+message CollectPacket {
+    // SpanID is the group of information which can uniquely identify the exact
+    // span being collected.
+    message SpanID {
+        // trace is the root ID of the tree that contains all of the spans
+        // related to this one.
+        fixed64 trace = 2;
+
+        // span is an ID that probabilistically uniquely identifies this span.
+        fixed64 span = 3;
+
+        // parent is the ID of the parent span, if any.
+        fixed64 parent = 4;
+    }
+
+    SpanID spanid = 1;
+
+    // Annotation is any number of annotations for the span to be collected.
+    message Annotation {
+        // key is the annotation's key.
+        string key = 6;
+
+        // value is the annotation's value, which may be either human or
+        // machine readable, depending on the schema of the event that
+        // generated it.
+        bytes value = 7;
+    }
+
+    repeated Annotation annotation = 5;
+}
