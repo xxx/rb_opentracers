@@ -190,6 +190,7 @@ class RbOpentracers::Reporter::Zipkin
   end
 
   def to_id(bytes)
+    return nil unless bytes
     stubs = []
     bytes.chars.each_slice(8) do |a|
       stubs << a.join.unpack('Q')[0].to_s(16)
