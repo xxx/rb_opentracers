@@ -1,2 +1,4 @@
-module RbOpentracers::Reporter
+module RbOpentracers
+  module Reporter
+  end
 end
