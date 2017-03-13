@@ -7,6 +7,9 @@ require_relative 'rb_opentracers/tracer'
 require_relative 'rb_opentracers/span'
 require_relative 'rb_opentracers/span_context'
 
+require 'concurrent'
+require 'concurrent-edge'
+
 require_relative 'rb_opentracers/reporter'
 require_relative 'rb_opentracers/reporter/logging'
 require_relative 'rb_opentracers/reporter/zipkin'

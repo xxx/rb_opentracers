@@ -33,6 +33,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "opentracing", "~> 0.3"
   spec.add_dependency "rest-client", "~> 2"
   spec.add_dependency "google-protobuf", "~> 3"
+  spec.add_dependency "concurrent-ruby", "~> 1.0"
+  spec.add_dependency "concurrent-ruby-edge", "~> 0.3"
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
