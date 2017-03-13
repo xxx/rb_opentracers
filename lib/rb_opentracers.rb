@@ -14,3 +14,6 @@ require_relative 'rb_opentracers/reporter'
 require_relative 'rb_opentracers/reporter/logging'
 require_relative 'rb_opentracers/reporter/zipkin'
 require_relative 'rb_opentracers/reporter/appdash'
+
+module RbOpentracers
+end
